@@ -1,0 +1,33 @@
+import 'package:flutter/material.dart';
+
+class DzhikrListWidget extends StatelessWidget {
+  const DzhikrListWidgGet({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [ ListView.builder(
+        scrollDirection: Axis.vertical,
+        shrinkWrap: true,
+        itemBuilder: (context, index) {
+          //! jan lupa ini ntar dipake
+          // final DailyDhizkr dhizkr = dailyDhizkrList[index];
+          return InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+              }));
+            },
+          );
+        }
+      ),
+      const SizedBox(
+        height: 75,
+        child: Column(
+          children: [
+            Stack()
+          ],
+        ),
+      )
+    ]);
+  }
+}
